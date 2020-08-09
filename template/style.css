@@ -8,3 +8,27 @@ body {
   height: 100vh; /* set to full viewport height */
   margin: 0;
 }
+
+/* Create a grid to organize page content */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+  grid-template-columns: 1fr; /* 1 column of 1fragment size */
+  grid-template-rows: 5rem 1fr 5rem; /* 3 rows of different sizes */
+  height: 100%;
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}

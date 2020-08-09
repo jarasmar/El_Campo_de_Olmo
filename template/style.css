@@ -23,6 +23,28 @@ body {
 
 .header {
   grid-area: header;
+  background-color: #184430;
+  color: #DEB738;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.brand a {
+  color: #DEB738;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header-links a {
+  color: #DEB738;
+  text-decoration: none;
+}
+
+.header-links a:hover {
+  color: #B1B94C;
 }
 
 .main {
@@ -31,4 +53,9 @@ body {
 
 .footer {
   grid-area: footer;
+  background-color: #548150;
+  color: #DEB738;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
 }

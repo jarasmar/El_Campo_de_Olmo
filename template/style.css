@@ -1,10 +1,13 @@
+@font-face { font-family: Poppins; src: url('Fonts/Poppins-ExtraLight.ttf'); }
+@font-face { font-family: Poppins; font-weight: bold; src: url('Fonts/Poppins-Regular.ttf');}
+
 html {
   font-size: 62.5%;  /* Default 16px * 62.5 = 10px = 1rem => more responsive in different browsers */
   box-sizing: border-box;
 }
 
 body {
-  font: 1.6rem Helvetica;  /* 16px */
+  font: 1.6rem Poppins, Arial, Tahoma;  /* 16px */
   height: 100vh; /* set to full viewport height */
   margin: 0;
 }
@@ -31,6 +34,7 @@ a {
   grid-area: header;
   background-color: #184430;
   color: #DEB738;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,7 +44,6 @@ a {
 .brand a {
   color: #DEB738;
   font-size: 2.5rem;
-  font-weight: bold;
 }
 
 .header-links a {

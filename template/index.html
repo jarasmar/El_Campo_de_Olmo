@@ -9,7 +9,7 @@
     <div class='grid-container'>
       <header class='header'>
         <div class='brand'>
-          <button onClick='openMenu()'> &#9776; </button>
+          <button onclick='openMenu()'> &#9776; </button>
           <a href='index.html'> El Campo de Olmo </a>
         </div>
         <div class='header-links'>
@@ -68,7 +68,7 @@
       }
 
       function closeMenu() {
-        document.querySelector('.sidebar').classList.add('close');
+        document.querySelector('.sidebar').classList.remove('open');
       }
     </script>
   </body>

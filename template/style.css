@@ -149,7 +149,3 @@ a {
 .sidebar.open {
   transform: translateX(0); /* When open state applies, it will show the side bar */
 }
-
-.sidebar.close {
-  transform: translateX(-30rem); /* When close state, hide again the side bar */
-}

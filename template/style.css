@@ -9,6 +9,11 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* Create a grid to organize page content */
 .grid-container {
   display: grid;
@@ -21,6 +26,7 @@ body {
   height: 100%;
 }
 
+/* Style Header */
 .header {
   grid-area: header;
   background-color: #184430;
@@ -35,22 +41,22 @@ body {
   color: #DEB738;
   font-size: 2.5rem;
   font-weight: bold;
-  text-decoration: none;
 }
 
 .header-links a {
   color: #DEB738;
-  text-decoration: none;
 }
 
 .header-links a:hover {
   color: #B1B94C;
 }
 
+/* Style Main Area */
 .main {
   grid-area: main;
 }
 
+/* Style Footer */
 .footer {
   grid-area: footer;
   background-color: #548150;
@@ -58,4 +64,49 @@ body {
   display: flex;
   align-items: center;
   padding: 0.5rem;
+}
+
+/* Home Screen */
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.products li {
+  list-style-type: none;
+  flex: 0 1 30rem; /* 0 for flex grow, 1 for flex shrink, 34rem for */
+  margin: 1rem;
+  height: 30rem;
+  border: .1rem #E5DCBE solid;
+  padding: 0;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0.5rem;
+}
+
+.product-image {
+  max-width: 30rem;
+  max-height: 20rem;
+}
+
+.product-name {
+  font-size: 2rem;
+}
+
+.product-name a:hover {
+  color: #548150;
+}
+
+.product-price {
+  font-size: 2rem;
+  color: #184430;
+  margin-bottom: 0.5rem;
 }

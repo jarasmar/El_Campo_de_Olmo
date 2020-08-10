@@ -26,7 +26,7 @@ a {
   "footer";
   grid-template-columns: 1fr; /* 1 column of 1fragment size */
   grid-template-rows: 5rem 1fr 5rem; /* 3 rows of different sizes */
-  height: 100%;
+  height: 100vh;
 }
 
 /* Style Header */
@@ -67,6 +67,7 @@ a {
   display: flex;
   align-items: center;
   padding: 0.5rem;
+  
 }
 
 /* Home Screen */
@@ -126,6 +127,7 @@ a {
 
 .sidebar {
   position: fixed;
+  transition: all .5s;
   transform: translateX(-30rem);  /* Keep the side bar on the left outside of the screen */
   width: 30rem;
   height: 100%;

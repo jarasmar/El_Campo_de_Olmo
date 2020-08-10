@@ -1,13 +1,151 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face { font-family: Poppins; src: url('/Fonts/Poppins-ExtraLight.ttf'); }
+@font-face { font-family: Poppins; font-weight: bold; src: url('/Fonts/Poppins-Regular.ttf');}
+
+html {
+  font-size: 62.5%;  /* Default 16px * 62.5 = 10px = 1rem => more responsive in different browsers */
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font: 1.6rem Poppins, Arial, Tahoma;  /* 16px */
+  height: 100vh; /* set to full viewport height */
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Create a grid to organize page content */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+  grid-template-columns: 1fr; /* 1 column of 1fragment size */
+  grid-template-rows: 5rem 1fr 5rem; /* 3 rows of different sizes */
+  height: 100%;
+}
+
+/* Style Header */
+.header {
+  grid-area: header;
+  background-color: #184430;
+  color: #DEB738;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.brand a {
+  color: #DEB738;
+  font-size: 2.5rem;
+}
+
+.header-links a {
+  color: #DEB738;
+}
+
+.header-links a:hover {
+  color: #B1B94C;
+}
+
+/* Style Main Area */
+.main {
+  grid-area: main;
+}
+
+/* Style Footer */
+.footer {
+  grid-area: footer;
+  background-color: #548150;
+  color: #DEB738;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+/* Home Screen */
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.products li {
+  list-style-type: none;
+  flex: 0 1 30rem; /* 0 for flex grow, 1 for flex shrink, 34rem for */
+  margin: 1rem;
+  height: 30rem;
+  border: .1rem #E5DCBE solid;
+  padding: 0;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0.5rem;
+}
+
+.product-image {
+  max-width: 30rem;
+  max-height: 20rem;
+}
+
+.product-name {
+  font-size: 2rem;
+}
+
+.product-name a:hover {
+  color: #548150;
+}
+
+.product-price {
+  font-size: 2rem;
+  color: #184430;
+  margin-bottom: 0.5rem;
+}
+
+/* Side Bar */
+.brand button {
+  font-size: 3rem;
+  color: #DEB738;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  transform: translateX(-30rem);  /* Keep the side bar on the left outside of the screen */
+  width: 30rem;
+  height: 100%;
+  background-color: #E5DCBE;
+}
+
+.sidebar-close-button {
+  border-radius: 50%;
+  border: 0.1rem black solid;
+  width: 2.5rem;
+  height: 2,5rem;
+  padding: 0.5rem;
+  font-size: 2rem;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 0.5rem;
+  top: 1.5rem;
+}
+
+.sidebar.open {
+  transform: translateX(0); /* When open state applies, it will show the side bar */
 }

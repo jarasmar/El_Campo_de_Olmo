@@ -17,6 +17,10 @@ a {
   color: black;
 }
 
+#root {
+  height: 100%;
+}
+
 /* Create a grid to organize page content */
 .grid-container {
   display: grid;
@@ -26,7 +30,7 @@ a {
   "footer";
   grid-template-columns: 1fr; /* 1 column of 1fragment size */
   grid-template-rows: 5rem 1fr 5rem; /* 3 rows of different sizes */
-  height: 100vh;
+  height: 100%;
 }
 
 /* Style Header */

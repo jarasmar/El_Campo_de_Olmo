@@ -1,6 +1,7 @@
 export default {
   products: [
     {
+      _id: 1,
       name: 'TOMATES (KG)',
       category: 'Hortalizas',
       image: '/images/tomato.jpg',
@@ -9,6 +10,7 @@ export default {
       numReviews: 10
     },
     {
+      _id: 2,
       name: 'LECHUGA (UD)',
       category: 'Hortalizas',
       image: '/images/lettuce.jpg',
@@ -17,6 +19,7 @@ export default {
       numReviews: 8
     },
     {
+      _id: 3,
       name: 'MIEL (400 GR)',
       category: 'Procesados',
       image: '/images/honey.jpg',
@@ -25,6 +28,7 @@ export default {
       numReviews: 15
     },
     {
+      _id: 4,
       name: 'TOMATES (KG)',
       category: 'Hortalizas',
       image: '/images/tomato.jpg',
@@ -33,6 +37,7 @@ export default {
       numReviews: 10
     },
     {
+      _id: 5,
       name: 'LECHUGA (UD)',
       category: 'Hortalizas',
       image: '/images/lettuce.jpg',
@@ -41,6 +46,7 @@ export default {
       numReviews: 8
     },
     {
+      _id: 6,
       name: 'MIEL (400 GR)',
       category: 'Procesados',
       image: '/images/honey.jpg',

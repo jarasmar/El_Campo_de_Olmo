@@ -1,5 +1,4 @@
 import React from 'react';
-import data from './data';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import './App.css';
 import HomeScreen from './Screens/HomeScreen';
@@ -25,6 +24,7 @@ function App() {
           </div>
           <div className='header-links'>
             <a href='signin.html'> USUARIO </a>
+            &nbsp;
             <a href='cart.html'> CESTA </a>
           </div>
         </header>

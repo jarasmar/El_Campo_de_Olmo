@@ -7,7 +7,8 @@ export default {
       image: '/images/tomato.jpg',
       price: 4,
       rating: 4.5,
-      numReviews: 10
+      numReviews: 10,
+      status: 'Disponible'
     },
     {
       _id: '2',
@@ -16,7 +17,8 @@ export default {
       image: '/images/lettuce.jpg',
       price: 2,
       rating: 5,
-      numReviews: 8
+      numReviews: 8,
+      status: 'Agotado'
     },
     {
       _id: '3',
@@ -25,7 +27,8 @@ export default {
       image: '/images/honey.jpg',
       price: 6.5,
       rating: 5,
-      numReviews: 15
+      numReviews: 15,
+      status: 'Disponible'
     },
     {
       _id: '4',
@@ -34,7 +37,8 @@ export default {
       image: '/images/tomato.jpg',
       price: 4,
       rating: 4.5,
-      numReviews: 10
+      numReviews: 10,
+      status: 'Agotado'
     },
     {
       _id: '5',
@@ -43,7 +47,8 @@ export default {
       image: '/images/lettuce.jpg',
       price: 2,
       rating: 5,
-      numReviews: 8
+      numReviews: 8,
+      status: 'Disponible'
     },
     {
       _id: '6',
@@ -52,7 +57,8 @@ export default {
       image: '/images/honey.jpg',
       price: 6.5,
       rating: 5,
-      numReviews: 15
+      numReviews: 15,
+      status: 'Disponible'
     }
   ]
 }

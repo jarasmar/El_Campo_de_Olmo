@@ -1,5 +1,11 @@
 // Reducers accept two parameters: state (default is []) and action
 
+import {
+  PRODUCT_LIST_REQUEST,
+  PRODUCT_LIST_SUCCESS,
+  PRODUCT_LIST_FAIL
+} from '../constants/productConstants';
+
 function productListReducer(state= { products: [] }, action) {
   // Check the action type and act accordingly
   switch (action.type){

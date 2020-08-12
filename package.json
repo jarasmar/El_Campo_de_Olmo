@@ -1,0 +1,22 @@
+{
+  "name": "el_campo_de_olmo",
+  "version": "1.0.0",
+  "description": "React e-commerce application for an organic farm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarasmar/El_Campo_de_Olmo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jarasmar/El_Campo_de_Olmo/issues"
+  },
+  "homepage": "https://github.com/jarasmar/El_Campo_de_Olmo#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

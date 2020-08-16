@@ -4,13 +4,13 @@ import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 
 function HomeScreen (props) {
-  //  Get data using useSelector, takes states and returns productList (products, loading and error)
+  //  Get data using useSelector, takes states and returns products, loading and error from productList
   const productList = useSelector(state => state.productList);
   const { products, loading, error } = productList;
   // Dispatch an action from react-redux to fetch data (called in useEffect())
   const dispatch = useDispatch();
 
-  // This will run only when everything is rendered (componentDidMount)
+  // This will run only when everything is rendered (componentDidMount) because input is []
   useEffect(() => {
     // action defined in productActions.js
     dispatch(listProducts());

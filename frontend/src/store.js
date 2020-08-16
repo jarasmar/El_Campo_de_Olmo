@@ -1,13 +1,14 @@
 // STORE brings together ACTIONS (facts about what happened) and REDUCERS (update the state according to the actions)
 
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import { productListReducer } from './reducers/productReducers';
+import { productListReducer, productDetailsReducer } from './reducers/productReducers';
 import thunk from 'redux-thunk';
 
 const initialState = {};
 
 const reducer = combineReducers({
   productList: productListReducer,
+  productDetails: productDetailsReducer
 })
 
 // Record actions with Chrome Devtools for Redux

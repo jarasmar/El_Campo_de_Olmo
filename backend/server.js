@@ -4,12 +4,6 @@ import data from './data';
 // express provides a simple server
 const app = express();
 
-// request for productsList
-app.get('/api/products', (req, res) => {  
-  // send all products from data.js as a response
-  res.send(data.products);
-});
-
 // request for detailsProduct
 app.get('/api/products/:id', (req, res) => { 
   const productId = req.params.id;
@@ -20,6 +14,12 @@ app.get('/api/products/:id', (req, res) => {
     res.send(product);
   else
     res.status(404).send({ msg: 'Product not found' });
+});
+
+// request for productsList
+app.get('/api/products', (req, res) => {  
+  // send all products from data.js as a response
+  res.send(data.products);
 });
 
 // First param: use 5000 as a port number. Second param: callback runs when server runs successfully

@@ -1,5 +1,4 @@
 // Reducers accept two parameters: state (default is []) and action
-
 import {
   PRODUCT_LIST_REQUEST,
   PRODUCT_LIST_SUCCESS,
@@ -35,7 +34,7 @@ function productDetailsReducer(state= { product: {} }, action) {
       return { loading: true };
     // if we get data from the server, set loading to false and set data(products) to payload action
     case PRODUCT_DETAILS_SUCCESS:
-      return { loading: false, products: action.payload };
+      return { loading: false, product: action.payload };
     // if error, set loading to false and error will be payload action
     case PRODUCT_DETAILS_FAIL:
       return { loading: false, error: action.payload };

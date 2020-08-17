@@ -52,7 +52,7 @@ function ProductScreen(props) {
             { product.available === true && 
             <div>CANTIDAD: &nbsp;
             <select value={ qty } onChange={ (e) => { setQty(e.target.value) } }>
-              { [...Array(11).keys()].map(x =>
+              { [...Array(product.maxOrder + 1).keys()].map(x =>
                 <option key={ x } value={ x }> { x } </option>
               )}
             </select>

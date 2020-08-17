@@ -8,7 +8,8 @@ export default {
       price: 4,
       rating: 4.5,
       numReviews: 10,
-      available: true
+      available: true,
+      maxOrder: 10
     },
     {
       _id: '2',
@@ -18,7 +19,8 @@ export default {
       price: 2,
       rating: 5,
       numReviews: 8,
-      available: false
+      available: false,
+      maxOrder: 8
     },
     {
       _id: '3',
@@ -28,7 +30,8 @@ export default {
       price: 6.5,
       rating: 5,
       numReviews: 15,
-      available: true
+      available: true,
+      maxOrder: 5
     },
     {
       _id: '4',
@@ -38,7 +41,8 @@ export default {
       price: 4,
       rating: 4.5,
       numReviews: 10,
-      available: false
+      available: false,
+      maxOrder: 10
     },
     {
       _id: '5',
@@ -48,7 +52,8 @@ export default {
       price: 2,
       rating: 5,
       numReviews: 8,
-      available: true
+      available: true,
+      maxOrder: 12
     },
     {
       _id: '6',
@@ -58,7 +63,8 @@ export default {
       price: 6.5,
       rating: 5,
       numReviews: 15,
-      available: true
+      available: true,
+      maxOrder: 7
     }
   ]
 }

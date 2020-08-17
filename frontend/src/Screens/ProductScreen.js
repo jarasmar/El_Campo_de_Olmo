@@ -32,7 +32,7 @@ function ProductScreen(props) {
 
     { loading? <div>Loading... </div> : 
     error? <div> { error } </div> : 
-    ( product &&
+    (
       <div className='details'>
         <div className='details-image'>
           <img src={ product.image } alt='product'></img>
@@ -43,15 +43,24 @@ function ProductScreen(props) {
           <p> { product.rating } Stars ({ product.numReviews } Reviews) </p>
           <h2> { product.price } € </h2>
           <br/>
-          <p> { product.status } </p>
-          <p> CANTIDAD: &nbsp;
+          
+          <div>
+            { product.available === false && <p> AGOTADO </p>}
+          </div>
+          
+          <div> 
+            { product.available === true && 
+            <div>CANTIDAD: &nbsp;
             <select value={ qty } onChange={ (e) => { setQty(e.target.value) } }>
               { [...Array(11).keys()].map(x =>
                 <option key={ x } value={ x }> { x } </option>
               )}
             </select>
-          </p>
-          <button onClick={ handleAddtoCart } id='btn-add-chart'> AÑADIR A LA CESTA </button>
+            <br/><br/>
+            <button onClick={ handleAddtoCart } id='btn-add-chart'> AÑADIR A LA CESTA </button>
+            </div>
+            }
+          </div>
         </div>
       </div>
     )}

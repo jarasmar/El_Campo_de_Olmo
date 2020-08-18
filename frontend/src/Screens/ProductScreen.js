@@ -50,7 +50,7 @@ function ProductScreen(props) {
           
           <div> 
             { product.available === true && 
-            <div>CANTIDAD: &nbsp;
+            <div>CANTIDAD &nbsp;
             <select value={ qty } onChange={ (e) => { setQty(e.target.value) } }>
               { [...Array(product.maxOrder + 1).keys()].map(x =>
                 <option key={ x } value={ x }> { x } </option>

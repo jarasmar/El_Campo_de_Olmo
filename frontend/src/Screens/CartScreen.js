@@ -17,6 +17,10 @@ function CartScreen(props) {
     dispatch(removeFromCart(productId));
   }
 
+  const checkoutHandler = () => {
+    props.history.push('/signin?redirect=shipping');
+  }
+
   useEffect(() => {
     if (productId) {
       dispatch(addToCart(productId, qty));
@@ -25,7 +29,7 @@ function CartScreen(props) {
 
   return <div className='cart'>
     <div className='cart-list'>
-      <ul class='cart-list-container'>
+      <ul className='cart-list-container'>
         <li>
           <h4> MI CESTA </h4>
         </li>
@@ -43,16 +47,16 @@ function CartScreen(props) {
 
               <div className='cart-name'>
                 <div>
-                  <Link to={ '/product/' + item.productId }>
+                  <Link to={ '/product/' + item.product }>
                     <h4> { item.name } </h4>
                   </Link>
                 </div>
                 <div>
                   CANTIDAD &nbsp;
-                  <select>
-                    <option value='1'> 1 </option>
-                    <option value='2'> 2 </option>
-                    <option value='3'> 3 </option>
+                  <select value={item.qty} onChange={ (e) => dispatch(addToCart(item.product, e.target.value)) }>
+                    { [...Array(item.maxOrder + 1).keys()].map(x =>
+                      <option key={ x } value={ x } > { x } </option>
+                    )}
                   </select>
                   <button type='button' className='deleteButton' onClick={ () => removeFromCartHandler(item.product) }>
                     Eliminar
@@ -76,7 +80,7 @@ function CartScreen(props) {
       <h3>
         TOTAL { cartItems.reduce((a, c) => a + c.price*c.qty, 0) } € 
       </h3>
-      <button id='btn-checkout' disabled={ cartItems.length === 0 }>
+      <button id='btn-checkout' onClick={ checkoutHandler } disabled={ cartItems.length === 0 }>
         REALIZAR PEDIDO
       </button>
     </div>

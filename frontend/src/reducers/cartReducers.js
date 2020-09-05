@@ -11,7 +11,7 @@ function cartReducer(state = { cartItems: [] }, action) {
         // if product already in cart, it just updates the qty, else add item
         return { 
           cartItems: 
-            state.cartItems.map(x=> x.product === product.productId ? item : x) 
+            state.cartItems.map(x => x.product === product.product ? item : x) 
         };
       }
       return { cartItems: [...state.cartItems, item] };

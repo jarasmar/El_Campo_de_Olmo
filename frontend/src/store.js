@@ -3,9 +3,13 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { productListReducer, productDetailsReducer } from './reducers/productReducers';
 import thunk from 'redux-thunk';
+import Cookie from 'js-cookie';
 import { cartReducer } from './reducers/cartReducers';
 
-const initialState = {};
+const cartItems = Cookie.getJSON('cartItems') || [];
+
+// Create initial state based on the Items coming from the Cookie
+const initialState = { cart: { cartItems } };
 
 const reducer = combineReducers({
   productList: productListReducer,

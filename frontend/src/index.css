@@ -206,7 +206,6 @@ a {
 .cart-action {
   flex: 1 1 30rem;
   background-color: #E5DCBE;
-  /* border: .1rem #f0f0f0 solid; */
   border-radius: .5rem;
   padding: 1rem;
 }
@@ -219,6 +218,7 @@ a {
 .cart-list-container li {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 1rem;
   align-items: flex-end;
   margin-bottom: 1rem;
   border-bottom: .1rem #E5DCBE solid;
@@ -227,6 +227,12 @@ a {
 .cart-list-container li img {
   max-width: 15rem;
   max-height: 15rem;
+}
+
+.cart-list-container li:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .cart-image {

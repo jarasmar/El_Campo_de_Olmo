@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { addToCart } from '../actions/cartActions';
+import { addToCart, removeFromCart } from '../actions/cartActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -13,6 +13,10 @@ function CartScreen(props) {
   const cart = useSelector(state => state.cart);
   const { cartItems } = cart;
 
+  const removeFromCartHandler = (productId) => {
+    dispatch(removeFromCart(productId));
+  }
+
   useEffect(() => {
     if (productId) {
       dispatch(addToCart(productId, qty));
@@ -23,12 +27,12 @@ function CartScreen(props) {
     <div className='cart-list'>
       <ul class='cart-list-container'>
         <li>
-          <h3> MI CESTA </h3>
+          <h4> MI CESTA </h4>
         </li>
         {
           cartItems.length === 0 ?
           <div>
-            La cesta está vacía
+            <h4> La cesta está vacía </h4>
           </div>
           :
           cartItems.map( item => 
@@ -36,6 +40,7 @@ function CartScreen(props) {
               <div className='cart-image'>
                 <img src={ item.image } alt='product' />
               </div> 
+
               <div className='cart-name'>
                 <div>
                   <Link to={ '/product/' + item.productId }>
@@ -49,6 +54,9 @@ function CartScreen(props) {
                     <option value='2'> 2 </option>
                     <option value='3'> 3 </option>
                   </select>
+                  <button type='button' className='deleteButton' onClick={ () => removeFromCartHandler(item.product) }>
+                    Eliminar
+                  </button>
                 </div>
               </div>
 

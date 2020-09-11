@@ -3,6 +3,7 @@ import data from './data';
 import dotenv from 'dotenv';
 import config from './config';
 import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
 import userRoute from './routes/userRoute';
 
 dotenv.config();
@@ -18,6 +19,9 @@ mongoose.connect(mongodbUrl, {
 
 // express provides a simple server
 const app = express();
+
+// bodyParser takes data from user input in a post request and passes it into a node app
+app.use(bodyParser.json());
 
 // Use the route from userRoute
 app.use('/api/users', userRoute);
